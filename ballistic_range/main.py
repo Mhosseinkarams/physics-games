@@ -16,7 +16,7 @@ from ballistic_range.game import Level
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Ballistic Range - Physics Prediction Game")
+    pygame.display.set_caption("Trebuchet Tactics: Castle Siege")
     clock = pygame.time.Clock()
 
     font = pygame.font.SysFont("Arial", 24)
@@ -25,9 +25,11 @@ def main():
     current_level_idx = 0
     total_score = 0
 
-    def load_level(idx):
+    def load_level(idx, prev_color=TREBUCHET_WOOD):
         if idx < len(LEVELS):
-            return Level(LEVELS[idx], font, small_font)
+            lvl = Level(LEVELS[idx], font, small_font, level_idx=idx)
+            lvl.trebuchet_color = prev_color
+            return lvl
         return None
 
     current_level = load_level(current_level_idx)
@@ -43,8 +45,9 @@ def main():
             result = current_level.handle_event(event)
             if result == "NEXT":
                 total_score += current_level.score
+                prev_color = current_level.trebuchet_color
                 current_level_idx += 1
-                current_level = load_level(current_level_idx)
+                current_level = load_level(current_level_idx, prev_color)
                 if current_level is None:
                     # End of game
                     print(f"Game Over! Total Score: {total_score:.1f}")
