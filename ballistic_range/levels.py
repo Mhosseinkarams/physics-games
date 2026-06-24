@@ -1,7 +1,7 @@
 LEVELS = [
     {
-        "name": "Level 1: Flat Range",
-        "description": "Target at fixed distance, no obstacles.",
+        "name": "Level 1: The Outer Wall",
+        "description": "A simple target. Find your range, commander.",
         "target_x": 80.0,
         "target_y": 0.0,
         "wind_accel": 0.0,
@@ -9,8 +9,8 @@ LEVELS = [
         "moving_target": False
     },
     {
-        "name": "Level 2: Elevated Target",
-        "description": "Target sits on a raised platform.",
+        "name": "Level 2: The Hilltop Keep",
+        "description": "Their tower sits higher than the rest.",
         "target_x": 70.0,
         "target_y": 10.0,
         "wind_accel": 0.0,
@@ -18,8 +18,8 @@ LEVELS = [
         "moving_target": False
     },
     {
-        "name": "Level 3: Obstacle",
-        "description": "A wall sits between cannon and target.",
+        "name": "Level 3: The Barricade",
+        "description": "A wall blocks your shot. Arc over it.",
         "target_x": 90.0,
         "target_y": 0.0,
         "wind_accel": 0.0,
@@ -27,17 +27,17 @@ LEVELS = [
         "moving_target": False
     },
     {
-        "name": "Level 4: Wind",
-        "description": "Constant horizontal force (headwind).",
+        "name": "Level 4: The Storm Siege",
+        "description": "Wind fights your aim today.",
         "target_x": 60.0,
         "target_y": 0.0,
-        "wind_accel": 2.0, # m/s^2 headwind
+        "wind_accel": 2.0,
         "obstacle": None,
         "moving_target": False
     },
     {
-        "name": "Level 5: Moving Target",
-        "description": "Target oscillates horizontally.",
+        "name": "Level 5: The Supply Cart",
+        "description": "Hit a moving target — time your shot.",
         "target_x": 70.0,
         "target_y": 0.0,
         "wind_accel": 0.0,
