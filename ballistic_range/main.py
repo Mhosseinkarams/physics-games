@@ -2,8 +2,12 @@ import pygame
 import sys
 import os
 
-# Add parent directory to sys.path to allow running this script directly
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add the directory containing 'ballistic_range' to sys.path
+# to allow running this script directly as 'python ballistic_range/main.py'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
 
 from ballistic_range.constants import *
 from ballistic_range.levels import LEVELS
