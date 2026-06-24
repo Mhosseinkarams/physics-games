@@ -4,6 +4,17 @@ Ballistic Range is a 2D physics game built with Pygame that challenges players t
 
 ## How to Play
 
+### Running the Game
+To run the game, use one of the following commands from the root directory:
+```bash
+python -m ballistic_range
+```
+or
+```bash
+python ballistic_range/main.py
+```
+
+### Gameplay Steps
 1.  **Observe the Goal:** Look at the target's distance and height. Some levels have obstacles or wind.
 2.  **Input Parameters:** Use the sliders to adjust the **Launch Angle** (0-90°) and **Initial Velocity** (5-60 m/s).
 3.  **Analyze the Prediction:** A dotted line shows your *predicted* trajectory based on the math equations displayed on the right.
